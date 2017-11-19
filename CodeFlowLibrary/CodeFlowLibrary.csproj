@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF1003CE-9E79-4F32-AA75-9217FD940E7D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeFlowLibrary</RootNamespace>
+    <AssemblyName>CodeFlowLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AssemblyLocation, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AssemblyLocation.0.0.1.0\lib\net461\AssemblyLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.0.0.1.0\lib\net45\Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReflectionExtensions, Version=0.1.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReflectionExtensions.0.1.0.2\lib\net461\ReflectionExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleLogging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleLogging.1.0.0.0\lib\net461\SimpleLogging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Verification, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Verification.1.0.0.4\lib\net45\Verification.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\MementoIgnore.cs" />
+    <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Controllers\Serializer.cs" />
+    <Compile Include="Custom Controls\Button\ImageButton.cs" />
+    <Compile Include="Custom Controls\Canvas\CanvasWithCanvasParent.cs" />
+    <Compile Include="Custom Controls\Canvas\DraggableCanvas.cs" />
+    <Compile Include="Custom Controls\Canvas\DraggableLabel.cs" />
+    <Compile Include="Custom Controls\Canvas\HighlightingCanvas.cs" />
+    <Compile Include="Custom Controls\Canvas\ResizableCanvas.cs" />
+    <Compile Include="Custom Controls\User Control\DraggableNodeVIew.cs" />
+    <Compile Include="Custom Controls\User Control\NodeView.cs" />
+    <Compile Include="Custom Controls\User Control\ResizableNodeView.cs" />
+    <Compile Include="Event\EventArgs\CancelableEventArgs.cs" />
+    <Compile Include="Event\EventArgs\DetachSlideRequestEventArgs.cs" />
+    <Compile Include="Event\EventArgs\FileEventArgs.cs" />
+    <Compile Include="Event\EventArgs\NodeSelectedEventArgs.cs" />
+    <Compile Include="Event\EventHandlers\CancelableEventHandler.cs" />
+    <Compile Include="Event\EventHandlers\FileEventHandler.cs" />
+    <Compile Include="Event\EventHandlers\NodeSelectedEventHandler.cs" />
+    <Compile Include="Event\EventHandlers\DetachSlideRequestEventHandler.cs" />
+    <Compile Include="Exceptions\GuidMismatchException.cs" />
+    <Compile Include="Exceptions\IgnoredPropertyException.cs" />
+    <Compile Include="Exceptions\InvalidSubclassException.cs" />
+    <Compile Include="Exceptions\PropertyNotFoundException.cs" />
+    <Compile Include="Exceptions\TypeMismatchException.cs" />
+    <Compile Include="Exceptions\ViewNotFoundException.cs" />
+    <Compile Include="Factories\ViewFactory.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="History\HistoryController.cs" />
+    <Compile Include="History\Mementos\IMemento.cs" />
+    <Compile Include="History\Mementos\Memento.cs" />
+    <Compile Include="History\Mementos\PropertyMemento.cs" />
+    <Compile Include="Implementations\File\FileStoreController.cs" />
+    <Compile Include="Interfaces\File\IStoreController.cs" />
+    <Compile Include="Model\BorderType.cs" />
+    <Compile Include="Model\DefaultNode.cs" />
+    <Compile Include="Model\Link.cs" />
+    <Compile Include="Model\ModelBase.cs" />
+    <Compile Include="Model\MultiChildLink.cs" />
+    <Compile Include="Model\Node.cs" />
+    <Compile Include="Model\ShapeType.cs" />
+    <Compile Include="Model\SingleChildLink.cs" />
+    <Compile Include="Model\Slide.cs" />
+    <Compile Include="Model\SlideCollection.cs" />
+    <Compile Include="Model\VisualNode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\CodeFlowViewModel.cs" />
+    <Compile Include="View\DefaultNodeView.xaml.cs">
+      <DependentUpon>DefaultNodeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SlideView.xaml.cs">
+      <DependentUpon>SlideView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VisualNodeView.xaml.cs">
+      <DependentUpon>VisualNodeView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\DefaultNodeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SlideView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\VisualNodeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Model\_ModelDiagram.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="logging.ico" />
+    <Content Include="Resources\Images\CornerDot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\CornerDotTransparent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\EButton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\EButtonHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\EButtonPressed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VButton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VButtonHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\VButtonPressed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Verify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

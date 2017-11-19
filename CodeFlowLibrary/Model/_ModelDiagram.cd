@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CodeFlowBuilder.Model.ModelBase">
+    <Position X="13" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAIAAAACAEAIAAAIAAAAQBgAAIJAAAACAAAAAAAQA=</HashCode>
+      <FileName>Model\ModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CodeFlowBuilder.Model.Link">
+    <Position X="17" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Model\Link.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeFlowBuilder.Model.Node">
+    <Position X="13" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAABAAADAQECAAAAIEwAAQAAIIAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Model\Node.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CodeFlowBuilder.Model.SingleChildLink">
+    <Position X="18" Y="17" Width="1.5" />
+    <InheritanceLine Type="CodeFlowBuilder.Model.Link" ManuallyRouted="true">
+      <Path>
+        <Point X="17.75" Y="15.175" />
+        <Point X="17.75" Y="16.538" />
+        <Point X="18.75" Y="16.538" />
+        <Point X="18.75" Y="17" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\SingleChildLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeFlowBuilder.Model.DefaultNode">
+    <Position X="10.75" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAgIAAAAIAAAAAIAAhAAAAECAgAQIAAAA=</HashCode>
+      <FileName>Model\DefaultNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeFlowBuilder.Model.MultiChildLink" Collapsed="true">
+    <Position X="15.75" Y="17.25" Width="1.5" />
+    <InheritanceLine Type="CodeFlowBuilder.Model.Link" FixedFromPoint="true">
+      <Path>
+        <Point X="17.312" Y="15.175" />
+        <Point X="17.312" Y="16.875" />
+        <Point X="16.5" Y="16.875" />
+        <Point X="16.5" Y="17.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\MultiChildLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeFlowBuilder.Model.VisualNode">
+    <Position X="10.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEEAAgAAAEAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Model\VisualNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeFlowBuilder.Model.Slide">
+    <Position X="13" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Model\Slide.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeFlowBuilder.Model.SlideCollection">
+    <Position X="15" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Model\SlideCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

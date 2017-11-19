@@ -1,0 +1,163 @@
+﻿<local:DraggableNodeView x:Class="CodeFlowLibrary.View.VisualNodeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cf="clr-namespace:CodeFlowLibrary.Custom_Controls"
+             xmlns:local="clr-namespace:CodeFlowLibrary.Custom_Controls"
+             mc:Ignorable="d"
+                            Background="Red"
+                            x:Name="usrControl"
+             d:DesignHeight="100" d:DesignWidth="300"
+             Width="200" Height="200">
+    
+    <local:DraggableNodeView.Resources>
+        <ResourceDictionary>
+            <Brush x:Key="EditBackground">#FFDDDDDD</Brush>
+            <Brush x:Key="TextColor">#FF000000</Brush>
+            <Brush x:Key="Borders">#FF111111</Brush>
+            <Brush x:Key="Border">#FF000000</Brush>
+        </ResourceDictionary>
+    </local:DraggableNodeView.Resources>
+    <local:DraggableNodeView.ContextMenu>
+        <ContextMenu>
+            <MenuItem 
+                Name="cmNewChild" 
+                Header="New Child"
+                Click="cmNewChild_Click"/>
+            <MenuItem
+                Name="cmNewLink"
+                Header="New Link"
+                Click="cmNewLink_Click"/>
+        </ContextMenu>
+    </local:DraggableNodeView.ContextMenu>
+
+    <Border
+        Name="outerBorder"
+        CornerRadius="3"
+        BorderBrush="{StaticResource Border}"
+        BorderThickness="3"
+        Margin="0"
+        Padding="0"
+        Width="{Binding ActualWidth, ElementName=usrControl}"
+        Height="{Binding ActualHeight, ElementName=usrControl}">
+        <Canvas Name="cvsMain" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" 
+                Margin="0"
+                MouseLeftButtonDown="cvsMain_LButtonDown" 
+                MouseLeftButtonUp="cvsMain_LButtonUp" 
+                MouseMove="cvsMain_MouseMove">
+            <Grid Name="grdMain" 
+                  Background="{StaticResource EditBackground}"  
+                  Canvas.Left="0" 
+                  Canvas.Top="0" 
+                  Width="{Binding ActualWidth, ElementName=cvsMain}"
+                  Height="{Binding ActualHeight, ElementName=cvsMain}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="*"  />
+                </Grid.RowDefinitions>
+                <Grid Name="grdName" Grid.Row="0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="45"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label 
+                        Content="Name" 
+                        Foreground="{StaticResource TextColor}"
+                        FontWeight="Bold"/>
+                    <TextBox 
+                        Name="txtName" 
+                        Grid.Column="1" 
+                        Background="{StaticResource EditBackground}"
+                        BorderBrush="{StaticResource Borders}"
+                        Foreground="{StaticResource TextColor}"
+                        TextChanged="txtName_TextChanged">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="3"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Grid>
+                <Grid 
+                    Name="grdDescription" 
+                    Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="45" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label 
+                        Content="Desc." 
+                        Grid.Column="0"
+                        FontWeight="Bold"
+                        Foreground="{StaticResource TextColor}"/>
+                    <TextBox
+                        Name="txtDescription" 
+                        Grid.Column="1" 
+                        Background="{StaticResource EditBackground}"
+                        Foreground="{StaticResource TextColor}"
+                        BorderBrush="{StaticResource Borders}"
+                        TextChanged="txtDescription_TextChanged">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="3"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Grid>                
+                <Label 
+                    Content="Comments"
+                    Grid.Row="2"
+                    HorizontalAlignment="Center"
+                    FontWeight="Bold"
+                    Foreground="{StaticResource TextColor}"/>
+                <TextBox 
+                    Name="txtComment" 
+                    Grid.Row="3" 
+                    Background="{StaticResource EditBackground}"
+                    Foreground="{StaticResource TextColor}"
+                    BorderBrush="{StaticResource Borders}"
+                    Text="{Binding Path=Comments}">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="3"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </Grid>
+            <cf:DraggableLabel
+                x:Name="dlName"
+                Background="red"
+                Height="75"
+                Width="150"
+                Canvas.Top="0" 
+                Canvas.Left="0"
+                Visibility="Collapsed"/>
+            <cf:DraggableLabel
+                x:Name="dlDescription"
+                Height="75"
+                Width="150"
+                Background="Red"
+                Canvas.Top="75"
+                Canvas.Left="0"
+                Visibility="Collapsed"/>
+            <cf:ImageButton 
+                x:Name="btnMode"
+                Width="24"
+                Height="25"
+                Canvas.Right="0"
+                Canvas.Bottom="0" 
+                Click="btnMode_Click" 
+                BorderThickness="0"
+                Background="Black"
+                Visibility="Collapsed"
+                DefaultImage="pack://application:,,,/CodeFlowBuilder;component/Resources/Images/VButton.png"
+                HoverImage="pack://application:,,,/CodeFlowBuilder;component/Resources/Images/VButtonHover.png"
+                PressedImage="pack://application:,,,/CodeFlowBuilder;component/Resources/Images/VButtonPressed.png"/>
+        </Canvas>
+    </Border>
+</local:DraggableNodeView>

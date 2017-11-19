@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code Flow", "Code Flow\Code Flow.csproj", "{53C8C03E-B8A8-40AD-A4C3-28139C6C196C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFlowBuilder", "CodeFlowBuilder\CodeFlowBuilder.csproj", "{DB1F6E03-1CBC-464B-B6D2-7DD42E082E52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFlowLibrary", "CodeFlowLibrary\CodeFlowLibrary.csproj", "{BF1003CE-9E79-4F32-AA75-9217FD940E7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tCodeFlowLibrary", "tCodeFlowLibrary\tCodeFlowLibrary.csproj", "{47E79BC1-F58D-4D1A-9E4E-81E5B3C687FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53C8C03E-B8A8-40AD-A4C3-28139C6C196C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C8C03E-B8A8-40AD-A4C3-28139C6C196C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C8C03E-B8A8-40AD-A4C3-28139C6C196C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C8C03E-B8A8-40AD-A4C3-28139C6C196C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB1F6E03-1CBC-464B-B6D2-7DD42E082E52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1F6E03-1CBC-464B-B6D2-7DD42E082E52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB1F6E03-1CBC-464B-B6D2-7DD42E082E52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB1F6E03-1CBC-464B-B6D2-7DD42E082E52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1003CE-9E79-4F32-AA75-9217FD940E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1003CE-9E79-4F32-AA75-9217FD940E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1003CE-9E79-4F32-AA75-9217FD940E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1003CE-9E79-4F32-AA75-9217FD940E7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47E79BC1-F58D-4D1A-9E4E-81E5B3C687FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E79BC1-F58D-4D1A-9E4E-81E5B3C687FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E79BC1-F58D-4D1A-9E4E-81E5B3C687FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E79BC1-F58D-4D1A-9E4E-81E5B3C687FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://jeremyfosbinder.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Code\u0020Flow\\Code\u0020Flow.csproj
+		SccProjectName1 = Code\u0020Flow
+		SccLocalPath1 = Code\u0020Flow
+		SccProjectUniqueName2 = CodeFlowBuilder\\CodeFlowBuilder.csproj
+		SccProjectName2 = CodeFlowBuilder
+		SccLocalPath2 = CodeFlowBuilder
+		SccProjectUniqueName3 = CodeFlowLibrary\\CodeFlowLibrary.csproj
+		SccProjectName3 = CodeFlowLibrary
+		SccLocalPath3 = CodeFlowLibrary
+		SccProjectUniqueName4 = tCodeFlowLibrary\\tCodeFlowLibrary.csproj
+		SccProjectName4 = tCodeFlowLibrary
+		SccLocalPath4 = tCodeFlowLibrary
+	EndGlobalSection
+EndGlobal
