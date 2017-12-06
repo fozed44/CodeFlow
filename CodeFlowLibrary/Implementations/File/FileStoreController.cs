@@ -53,6 +53,8 @@ namespace CodeFlowLibrary.Implementations {
         /// A new SlideCollection object built by deserializing the file 'filename'
         /// </returns>
         public SlideCollection RestoreSlideCollection(string filename, HistoryController historyController) {
+            // TODO:
+            //  Put deserialization in a try block.
             var result = Serializer.DeSerialize(filename, historyController);
             if(result.GetType() != typeof(SlideCollection))
                 throw new InvalidOperationException(
